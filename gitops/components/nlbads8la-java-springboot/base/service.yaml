@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata: 
+  labels: 
+    app.kubernetes.io/instance: nlbads8la-java-springboot
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: nlbads8la-java-springboot 
+  name: nlbads8la-java-springboot
+spec:
+  ports:
+  - port: 8081 
+    targetPort: 8081 
+  selector:
+    app.kubernetes.io/instance: nlbads8la-java-springboot 

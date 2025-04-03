@@ -1,0 +1,18 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata: 
+  labels: 
+    app.kubernetes.io/instance: nlbads8la-java-springboot
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: nlbads8la-java-springboot 
+  name: nlbads8la-java-springboot
+spec:
+  port:
+    targetPort: 8081 
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: nlbads8la-java-springboot
+    weight: 100 
